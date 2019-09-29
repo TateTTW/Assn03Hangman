@@ -50,15 +50,24 @@ main{
 	margin-top: 50px;
 }
 
+#resetBtn{
+	font-weight: bold;
+	background-color: DeepSkyBlue;
+	background-color: red;
+	border: 1px solid black;
+	cursor:pointer;
+}
+
 #prevLettersContainer{
-	border: 4px double black;
+	border: 2px dotted black;
 	width:auto;
-	margin: 30px;
+	margin: 40px;
 	background-color:DeepSkyBlue;
 }
 
 #prevLettersContainer h3{
 	text-decoration: underline;
+	font-size: 14px;
 }
 
 #prevLetters{

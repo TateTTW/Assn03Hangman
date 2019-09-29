@@ -17,11 +17,7 @@
 			<h2>Instructions</h2>
 			<p>Guess a letter by typing a key on your keyboard. Previous guesses appear above the hangman. Guess the word before the hangman depiction is complete and you win. If not, YOU LOOSE!</p>
 		</article>
-			<div id='prevLettersContainer'>
-				<h3>Previous Guesses</h3>
-				<div id='prevLetters'>
-				</div>
-			</div>
+			<button onclick="start()" id='resetBtn'>Reset</button><br/>
 			<table id='table'>
 				<tr>
 					<td><img style='visibility: hidden' id='branch' src='images/blueBranch.png'></td>
@@ -39,10 +35,11 @@
 			<br/>
 			<div id='randomWord'></div>
 			<br/>
-			<input type="text" id="txt" style=''>
-			<br/>
-			<button onclick="start()">Reset</button><br/>
-			<button onclick="focusTxtBox()">Keyboard</button><br/>
+			<div id='prevLettersContainer'>
+				<h3>Guesses</h3>
+				<div id='prevLetters'>
+				</div>
+			</div>
 	</main>
 </body>
 </html>

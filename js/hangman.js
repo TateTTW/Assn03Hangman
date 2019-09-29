@@ -1,9 +1,16 @@
 var words = ["rock","paper","scissors","airplane","cat","car","tree","dog","house","book", "foot" , "firepit", "police"
-	,"keyboard","computer","building","road","train","desk","neighbor","picture","boat","elephant","frame"];
+	,"keyboard","computer","building","road","train","desk","neighbor","picture","boat","elephant","frame","game","motorcycle",
+	"printer","light","pillow","bed","arcade","window","hill","grass","garage","weight","office","stapler","couch","monkey",
+	"cup","bottle","carpet","wood","ship","sky","father","mother","brother","sister","aunt","uncle","cousin","bridge","stone",
+	"rug","vacuum", "boy", "girl", "europe" , "america", "canada", "russia", "africa", "asia", "japan", "antarctica", "alaska",
+	"bike","mountain", "ocean", "sea", "continent", "trade", "school", "class", "student", "teacher", "science", "art", "human",
+	"read", "predator", "religion", "idiot", "money", "phone", "watch", "electricity", "wire", "gym", "fun", "heavy", "dolphin"];
 var guesses = [];
 var incorrect = 0;
 
-
+$(document).keypress(function(e){   		
+    processKeyPress(e.key.toLowerCase());
+});
 
 function getRandomWord(){
 	var num = Math.floor(Math.random() * (words.length - 0 + 0)) + 0;
@@ -11,27 +18,11 @@ function getRandomWord(){
 }
 
 function start(){
-	setKeyPressEvents();
 	this.word = getRandomWord();
 	clearWordDisplay();
 	clearGuesses();
 	hideHangman();
 	buildRandomWord();
-}
-
-function focusTxtBox(){
-	var txt = document.getElementById('txt');
-	txt.focus();
-}
-
-function setKeyPressEvents(){
-	var txt = document.getElementById('txt');
-	txt.onkeypress = function (e){
-		processKeyPress(e.key.toLowerCase());
-	}
-	$(document).keypress(function(e){   		
-	    processKeyPress(e.key.toLowerCase());
-	});
 }
 
 function clearWordDisplay(){
@@ -108,7 +99,7 @@ function showAnImage(){
 			}
 			setTimeout(function(){
 				if(hasLost()){
-					alert('You Lose! The word was ' + this.word);
+					alert('You Lose! The word was ' + this.word + '.');
 					start();
 			}});
 			break;
