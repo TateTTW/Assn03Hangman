@@ -13,13 +13,17 @@ function getRandomWord(){
 }
 
 function start(){
-	var txt = document.getElementById('txt');
-	txt.focus();
+
 	this.word = getRandomWord();
 	clearWordDisplay();
 	clearGuesses();
 	hideHangman();
 	buildRandomWord();
+}
+
+function focusTxtBox(){
+	var txt = document.getElementById('txt');
+	txt.focus();
 }
 
 function clearWordDisplay(){
