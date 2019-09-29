@@ -8,13 +8,12 @@ var words = ["rock","paper","scissors","airplane","cat","car","tree","dog","hous
 var guesses = [];
 
 function getRandomWord(){
-	var num = Math.floor(Math.random() * (words.length - 0 + 0)) + 0;
+	var num = Math.floor(Math.random() * ((words.length-1) - 0 + 0)) + 0;
 	return words[num];
 }
 
 function start(){
 	this.word = getRandomWord();
-	clearWordDisplay();
 	clearGuesses();
 	hideHangman();
 	buildRandomWord();
@@ -26,6 +25,7 @@ function clearWordDisplay(){
 }
 
 function buildRandomWord(){
+	clearWordDisplay();
 	var wordDisplay = document.getElementById('randomWord');
 	var str = '';
 	for(var i = 0; i < this.word.length ; i++){
