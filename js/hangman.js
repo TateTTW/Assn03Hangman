@@ -13,6 +13,8 @@ function getRandomWord(){
 }
 
 function start(){
+	var txt = document.getElementById('txt');
+	txt.focus();
 	this.word = getRandomWord();
 	clearWordDisplay();
 	clearGuesses();
