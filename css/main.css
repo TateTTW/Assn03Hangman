@@ -1,0 +1,85 @@
+@charset "ISO-8859-1";
+
+body{
+	font-family:"Lucida Console", Monaco, monospace;
+	background-color: FloralWhite;
+}
+
+p{
+	font-size: 12px;
+}
+
+h1{
+	font-size: 28px;
+	font-weight: bold;
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
+header h1{
+	padding-top: 10px;
+}
+
+h2{
+	font-size: 16px;
+	font-weight: bold;
+}
+
+header{
+		color: FloralWhite;
+		height: 50px;
+}
+
+article{
+	border: 1px dashed black;
+	padding: 10px;
+	margin: 10px;
+	background-color: DodgerBlue;
+}
+
+main{
+	background-color: #2045D8;
+	width: 500px;
+	border: 2px solid black;
+	padding-bottom: 20px;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 50px;
+}
+
+#prevLettersContainer{
+	border: 4px double black;
+	width:auto;
+	margin: 30px;
+	background-color:DeepSkyBlue;
+}
+
+#prevLettersContainer h3{
+	text-decoration: underline;
+}
+
+#prevLetters{
+	padding:10px;
+	font-weight: bold;
+}
+
+#table{
+	border-right: 10px solid #804000;
+}
+
+
+td{
+	margin:0;
+	padding:0;
+	width: auto;
+	height: auto;
+}
+
+.letterPlaceholder{
+	border-bottom: 5px solid red;
+	margin:2px;
+	font-size: 19px;
+}
