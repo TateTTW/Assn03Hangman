@@ -3,9 +3,7 @@ var words = ["rock","paper","scissors","airplane","cat","car","tree","dog","hous
 var guesses = [];
 var incorrect = 0;
 
-$(document).keypress(function(e){   		
-    processKeyPress(e.key.toLowerCase());
-});
+
 
 function getRandomWord(){
 	var num = Math.floor(Math.random() * (words.length - 0 + 0)) + 0;
@@ -13,7 +11,7 @@ function getRandomWord(){
 }
 
 function start(){
-
+	setKeyPressEvents();
 	this.word = getRandomWord();
 	clearWordDisplay();
 	clearGuesses();
@@ -24,6 +22,16 @@ function start(){
 function focusTxtBox(){
 	var txt = document.getElementById('txt');
 	txt.focus();
+}
+
+function setKeyPressEvents(){
+	var txt = document.getElementById('txt');
+	txt.onkeypress = function (e){
+		processKeyPress(e.key.toLowerCase());
+	}
+	$(document).keypress(function(e){   		
+	    processKeyPress(e.key.toLowerCase());
+	});
 }
 
 function clearWordDisplay(){
