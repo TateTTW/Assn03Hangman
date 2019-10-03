@@ -29,10 +29,12 @@ function start(){
 function clearCanvas(){
 	misses = 0;
 	var canvas = document.querySelector('canvas');
-	canvas.height = 400;
-	canvas.width = 400;
-	var c = canvas.getContext('2d');
-	c.clearRect(0, 0, canvas.width, canvas.height);
+	if(canvas != undefined){
+		canvas.height = 400;
+		canvas.width = 400;
+		var c = canvas.getContext('2d');
+		c.clearRect(0, 0, canvas.width, canvas.height);
+	}
 }
 
 function drawHangman(){
