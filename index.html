@@ -22,8 +22,13 @@
 			<h2>Instructions</h2>
 			<p>Guess a letter by typing a key on your keyboard. Previous guesses appear below the hangman. Guess the word before the hangman depiction is complete and you win. If not, YOU LOSE!</p>
 		</article>
+			<select id='lvlSelect'>
+			  <option value="easy">Easy</option>
+			  <option value="medium">Medium</option>
+			  <option value="hard">Hard</option>
+			</select>
 			<button onclick="start()" id='resetBtn'>Reset</button><br/>
-			<table id='table'>
+			<table id='table' style='display: none'>
 				<tr>
 					<td><img style='visibility: hidden' id='branch' src='images/blueBranch.png'></td>
 				</tr>
@@ -37,6 +42,8 @@
 					<td><img style='visibility: hidden' id='leftLeg' src="images/blueLeftLeg.png"><img style='visibility: hidden' id='rightLeg' src="images/blueRightLeg.png"></td>	
 				</tr>
 			</table>
+			<canvas>
+			</canvas>
 			<br/>
 			<div id='randomWord'></div>
 			<br/>
