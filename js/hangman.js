@@ -40,70 +40,70 @@ function clearCanvas(){
 function drawHangman(){
 	var canvas = document.querySelector('canvas');
 	if(canvas != undefined){
-	canvas.height = 400;
-	canvas.width = 400;
-	var c = canvas.getContext('2d');
-	c.lineWidth = 3;
-	c.strokeStyle = "black";
-	misses++;
-	
-	switch(misses){
-	case 9:	
-		//right leg
-		c.beginPath();
-		c.moveTo(200, 270);
-		c.lineTo(255, 360)
-		c.stroke();
-	case 8:	
-		//left leg
-		c.beginPath();
-		c.moveTo(200, 270);
-		c.lineTo(145, 360)
-		c.stroke();
-	case 7:	
-		//right arm
-		c.beginPath();
-		c.moveTo(200, 210);
-		c.lineTo(290, 150);
-		c.stroke();
-	case 6:		
-		//left arm
-		c.beginPath();
-		c.moveTo(110, 150);
-		c.lineTo(200, 210);
-		c.stroke();
-	case 5:	
-		//body
-		c.beginPath();
-		c.moveTo(200, 170);
-		c.lineTo(200, 270);
-		c.stroke();	
-		//noose
-		c.fillStyle = "#804000";
-		c.fillRect(197,170,10,5);
-	case 4:	
-		//head
-		c.beginPath();
-		c.arc(200,140,30,0,Math.PI * 2,false)
-		c.stroke();		
-		//noose
-		c.fillStyle = "#804000";
-		c.fillRect(197,170,10,5);
-	case 3:	
-		//rope
-		c.fillStyle = "#804000";
-		c.fillRect(200,50,9,60);
-	case 2:	
-		//branch
-		c.fillStyle = "#663300";
-		c.fillRect(95,50,270,15);
-	case 1:
-		//pole
-		c.fillStyle = "#663300";
-		c.fillRect(350,50,20,400);
-		break;
-	default:
-	}
+		canvas.height = 400;
+		canvas.width = 400;
+		var c = canvas.getContext('2d');
+		c.lineWidth = 3;
+		c.strokeStyle = "black";
+		misses++;
+		
+		switch(misses){
+		case 9:	
+			//right leg
+			c.beginPath();
+			c.moveTo(200, 270);
+			c.lineTo(255, 360)
+			c.stroke();
+		case 8:	
+			//left leg
+			c.beginPath();
+			c.moveTo(200, 270);
+			c.lineTo(145, 360)
+			c.stroke();
+		case 7:	
+			//right arm
+			c.beginPath();
+			c.moveTo(200, 210);
+			c.lineTo(290, 150);
+			c.stroke();
+		case 6:		
+			//left arm
+			c.beginPath();
+			c.moveTo(110, 150);
+			c.lineTo(200, 210);
+			c.stroke();
+		case 5:	
+			//body
+			c.beginPath();
+			c.moveTo(200, 170);
+			c.lineTo(200, 270);
+			c.stroke();	
+			//noose
+			c.fillStyle = "#804000";
+			c.fillRect(197,170,10,5);
+		case 4:	
+			//head
+			c.beginPath();
+			c.arc(200,140,30,0,Math.PI * 2,false)
+			c.stroke();		
+			//noose
+			c.fillStyle = "#804000";
+			c.fillRect(197,170,10,5);
+		case 3:	
+			//rope
+			c.fillStyle = "#804000";
+			c.fillRect(200,50,9,60);
+		case 2:	
+			//branch
+			c.fillStyle = "#663300";
+			c.fillRect(95,50,270,15);
+		case 1:
+			//pole
+			c.fillStyle = "#663300";
+			c.fillRect(350,50,20,400);
+			break;
+		default:
+		}
 	}
 }
 
