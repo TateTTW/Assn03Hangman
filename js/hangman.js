@@ -39,6 +39,7 @@ function clearCanvas(){
 
 function drawHangman(){
 	var canvas = document.querySelector('canvas');
+	if(canvas != undefined){
 	canvas.height = 400;
 	canvas.width = 400;
 	var c = canvas.getContext('2d');
@@ -103,7 +104,7 @@ function drawHangman(){
 		break;
 	default:
 	}
-	
+	}
 }
 
 function buildWord(word){
